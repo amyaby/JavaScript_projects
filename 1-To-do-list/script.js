@@ -33,10 +33,10 @@ function createMusicIcon() {
   //create a box
   function showQuoteBox(){
     const quoteBox = document.createElement('div');
-    quoteBox.classList = add('quote-box');
+    quoteBox.classList.add('quote-box');
     quoteBox.innerText = getRandomQuote();
     document.body.appendChild(quoteBox);
-    const sound = new Audio('quote.mp3');
+    const sound = new Audio('zaghrouta.mp3');
     setTimeout(()=>quoteBox.remove(),5000);
   }
   function getRandomQuote(){
@@ -52,7 +52,7 @@ function createMusicIcon() {
     "Hoy es un buen día para comenzar de nuevo",
     "No estás solo",
     ];
-    returnquotes[Math.floor(Math.random() * quotes.length)];
+    return quotes[Math.floor(Math.random() * quotes.length)];
   }
   const listContainer = document.getElementById("list-container");
   const inputBox = document.getElementById("input-box");
@@ -60,6 +60,11 @@ function createMusicIcon() {
     if(inputBox.value === '')
     {
         alert("por favor, introduzca algunos datos");
-    }else
-
+    }else{
+      let li = document.createElement("li");
+      li.innerHTML = inputBox.value;
+      listContainer.appendChild(li);
+    }
+  inputBox.value = "";
   }
+  
