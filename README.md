@@ -88,7 +88,7 @@ align-items: center;
 
 ```css
      border-radius: 10px;
-    ```
+```
 
  `border-radius rounds the corners of an element (like a button, a div, an image, etc.).`
  Here's a **simple Markdown summary** for your `README.md` to explain `::before`, `::after`, and how we use CSS selectors:
