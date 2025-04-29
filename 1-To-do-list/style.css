@@ -1,0 +1,111 @@
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: url('images/ChatGPT\ Image\ Apr\ 1\,\ 2025\,\ 12_22_01\ AM.png') no-repeat center center/cover;
+    position: relative;
+   
+}
+.container{
+    width:100%;
+    min-height :100vh;
+    background-size: contain;
+    padding:10;
+    display: flex; /* ADD THIS */
+    justify-content: center; /* ADD THIS */
+    align-items: center; /* ADD THIS */
+
+} 
+.to-do{
+    width:100%;
+    max-width:600px;
+    background-color:transparent;
+     border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* optional shadow */
+    padding:70px 70px 50px;
+    text-align: center;
+}
+.to-do h2{
+    color:beige;
+    display:flex;
+    align-items:center;
+    font-size: 10px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    justify-content: center; /* center title + image */
+    margin-bottom: 30px; /* spacing below title */
+}
+.to-do h2 img{
+    width: 35px;
+    margin-left:10px;
+    border-radius: 10px;
+
+}
+.to-do:hover{
+    box-shadow: 1px 2px 2px 3px rgb(61, 3, 3);
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius:10px;
+    padding-left:20px;
+    margin-bottom:25px;
+}
+input{
+    flex:1;
+    border: none;
+    outline:none;
+    font-weight: 10px;
+}
+
+.row input {
+    flex: 1;
+    padding: 10px;
+    margin-right: 10px; /* Add space between input and button */
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: transparent ;
+    ;
+  }
+  
+  .row button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #5f9ea0 ;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  button:hover{
+    background-color:#5f9ea0 ;
+    font-size: 17px;
+    padding:12px 8px 12px 50px;
+    cursor:pointer;
+  }
+
+  ul li{
+    position:relative;
+  }
+  ul li::before{
+    content:'';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius:50%;
+    background: url(images/Screenshot_27-4-2025_194236_www.bing.com.jpeg);
+    background-size: cover;
+    background-position: center;
+    top:8px;
+    left:16px;
+  }
