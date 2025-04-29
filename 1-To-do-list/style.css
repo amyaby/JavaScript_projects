@@ -10,6 +10,7 @@ body {
     padding: 0;
     height: 100vh;
     background: url('images/ChatGPT\ Image\ Apr\ 1\,\ 2025\,\ 12_22_01\ AM.png') no-repeat center center/cover;
+    background-attachment: fixed;
     position: relative;
    
 }
@@ -17,11 +18,10 @@ body {
     width:100%;
     min-height :100vh;
     background-size: contain;
-    padding:10;
+    padding:20px;
     display: flex; /* ADD THIS */
     justify-content: center; /* ADD THIS */
     align-items: center; /* ADD THIS */
-
 } 
 .to-do{
     width:100%;
@@ -33,11 +33,11 @@ body {
     text-align: center;
 }
 .to-do h2{
-    color:beige;
+    color:rgb(237, 233, 230);
     display:flex;
     align-items:center;
-    font-size: 10px;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    font-family:'Courier New', Courier, monospace;
     justify-content: center; /* center title + image */
     margin-bottom: 30px; /* spacing below title */
 }
@@ -73,14 +73,14 @@ input{
     outline: none;
     border-radius: 10px;
     font-size: 16px;
-    background-color: transparent ;
+    background-color: rgb(27, 69, 27);
     ;
   }
   
   .row button {
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #5f9ea0 ;
+    background-color: #350825 ;
     color: white;
     border: none;
     outline: none;
@@ -88,7 +88,7 @@ input{
     border-radius: 10px;
   }
   button:hover{
-    background-color:#5f9ea0 ;
+    background-color:#350825  ;
     font-size: 17px;
     padding:12px 8px 12px 50px;
     cursor:pointer;
@@ -96,16 +96,74 @@ input{
 
   ul li{
     position:relative;
-  }
+    list-style:none;
+    cursor:pointer;
+    user-select:none;
+    padding:12px 8px 12px 50px;
+    font-size:17px;
+    font-family:'Courier New', Courier, monospace;
+    color:aliceblue ; 
+    font-weight : bold;
+}
   ul li::before{
     content:'';
     position: absolute;
     height: 28px;
     width: 28px;
-    border-radius:50%;
-    background: url(images/Screenshot_27-4-2025_194236_www.bing.com.jpeg);
+    background: url(images/image-7.png);
     background-size: cover;
     background-position: center;
     top:8px;
     left:16px;
   }
+  ul li.checked{
+    color:rgb(207, 194, 194);
+    text-decoration: line-through;
+  }
+  ul li.checked::before{
+    color:bisque;
+    background-image: url(images/image-6.png);
+  }
+  .checked{
+    margin: 8px 0;
+    background: transparent;
+    border-radius: 8px;
+    color: #333;
+
+  }
+  ul {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: left;
+  }
+  
+  #list-container {
+    margin-top: 20px;
+    width: 100%;
+  }
+  .music-icon {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    font-size: 24px;
+    z-index: 9999;
+    pointer-events: none;
+    animation: floatMusic 5s linear forwards;
+  }
+    .quote-box {
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #111;
+        color: #fff;
+        padding: 1rem 2rem;
+        border-radius: 10px;
+        font-family: sans-serif;
+        font-size: 1rem;
+        box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        opacity: 0.9;
+      }
+  
+  
