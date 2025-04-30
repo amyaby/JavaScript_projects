@@ -1,6 +1,9 @@
 # JavaScript Projects
 
-![alt text](image.png)
+![alt text](readme-images/image.png)
+
+# PROJECT 1:
+![alt text](readme-images/FINALE.png)
 
 ## Important Notes
 
@@ -32,7 +35,7 @@ Use the `<script>` tag, usually placed right before the closing `</body>` tag, t
 
 ### `<div>` Element - Quick Summary
 
-![alt text](image-1.png)
+![alt text](readme-images/image-1.png)
 
 - **Purpose**: The `<div>` element is used to create a **container** or **wrapper** for grouping HTML elements.
 - **Block-level**: Takes up the full width by default and starts on a new line.
@@ -69,9 +72,9 @@ The `<button>` tag creates a clickable button that can trigger JavaScript functi
 ```
 ## Difference between %, vh, and px
 
-![alt text](image.png)
-![alt text](image-3.png)
-![alt text](image-5.png)
+![alt text](readme-images/image.png)
+![alt text](readme-images/image-3.png)
+![alt text](readme-images/image-5.png)
 
 ## Remember
 
@@ -84,7 +87,7 @@ justify-content: center;
 align-items: center;
 ```
 `This combo is the key to putting anything (like an image, text, div...) perfectly in the center (both horizontally and vertically).`
-![alt text](image-4.png)
+![alt text](readme-images/image-4.png)
 
 ```css
      border-radius: 10px;
@@ -400,4 +403,68 @@ This is your **task-adding function**. Here's what happens:
      ```js
      listContainer.appendChild(li);
      ```
+## LOCAL STORAGE && setItem :
+ **localStorage – What is it?**
 
+`localStorage is part of the Web Storage API. It allows you to store data in the browser – even after the user closes or reloads the page.`
+
+**setItem() – What does it do?**
+`This method saves a value in localStorage.`
+```js
+localStorage.setItem("key", "value");
+```
+![alt text](readme-images/image-7.png)
+![alt text](readme-images/image-8.png)
+**localStorage.getItem(key)**
+`It retrieves data that was saved in the local storage using a given key, so you can see the tasks again even after refreshing the page.`
+
+
+
+---
+
+### 🧠 Event listener : What does this do?
+
+```js
+listContainer.addEventListener("click", function(e) {
+  if (e.target.tagName == "LI") {
+    e.target.classList.toggle("checked");
+    saveTask();
+  }
+});
+```
+
+This code says:
+
+> “When someone **clicks** on something **inside** the `listContainer`, check **what** they clicked. If they clicked a **list item (`<li>`)**, then mark it as done or not done (toggle a ‘checked’ class), and then save the new state to localStorage.”
+
+---
+
+### 🔍 Line by line breakdown:
+
+#### ✅ `listContainer.addEventListener("click", function(e) { ... });`
+- This means:  
+  “Listen for a click anywhere **inside** the `listContainer` (where all your tasks are).”
+
+#### ✅ `e` is the event object.
+- It contains details about **what was clicked**.
+
+#### ✅ `e.target.tagName == "LI"`
+- This checks:  
+  > “Did the person **click directly on a `<li>`** (a task item)?”
+
+#### ✅ `e.target.classList.toggle("checked");`
+- This **adds or removes** the class `"checked"` from that `<li>`.  
+- It makes it **look done or not done** (like crossing it out).
+
+#### ✅ `saveTask();`
+- This calls your function that saves all tasks (including which ones are marked done) into **localStorage**, so it stays there after refreshing the page.
+
+---
+
+### 🧠 Simple analogy:
+
+Imagine a **notebook** full of tasks.
+
+- You tap on a task → it gets a ✔️ check mark.
+- You tap again → the ✔️ disappears.
+- Each time, your notebook (localStorage) saves the updated list.
