@@ -1,5 +1,5 @@
 # JavaScript Projects
-![alt text](readme-images/image.png)
+![alt text](image.png)
 
 # PROJECT 1:
 ![alt text](readme-images/FINALE.png)
