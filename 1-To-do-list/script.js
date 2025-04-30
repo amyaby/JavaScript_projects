@@ -36,8 +36,24 @@ function createMusicIcon() {
     quoteBox.classList.add('quote-box');
     quoteBox.innerText = getRandomQuote();
     document.body.appendChild(quoteBox);
-    const sound = new Audio('zaghrouta.mp3');
-    setTimeout(()=>quoteBox.remove(),5000);
+    quoteBox.style.position = 'absolute';
+  const startX = Math.random() * window.innerWidth;
+  const endX = startX + ( 200 - 100);
+  const startY = window.innerHeight - 100;  // Start from the bottom of the page
+  const endY = startY - 200 - Math.random() * 200;
+  quoteBox.style.left = `${startX}px`;
+  quoteBox.style.top = `${startY}px`;
+
+  // Animation for the quote moving upwards
+  quoteBox.animate([
+    { transform: `translate(0, 0)`, opacity: 1 },
+    { transform: `translate(${endX - startX}px, ${endY - startY}px)`, opacity: 1 }
+  ], {
+    duration: 6000,
+    easing: 'linear',
+    fill: 'forwards'
+  });
+    setTimeout(() => quoteBox.remove(), 5000);
   }
   function getRandomQuote(){
     const quotes = [
@@ -65,6 +81,38 @@ function createMusicIcon() {
       li.innerHTML = inputBox.value;
       listContainer.appendChild(li);
     }
+    showQuoteBox();
   inputBox.value = "";
+  saveTask();
   }
-  
+  listContainer.addEventListener("click", function(e) {
+    if (e.target.tagName === "LI") {
+        // Toggle checked state
+        const isChecked = e.target.classList.toggle("checked");
+        
+        // If it was just unchecked (second click), remove it
+        if (!isChecked) {
+            
+            // Animate removal
+            e.target.style.transform = 'translateX(100%)';
+            e.target.style.opacity = '0';
+            
+            // Remove after animation completes
+            setTimeout(() => {
+                e.target.remove();
+                saveTask();
+            }, 300);
+        } else {
+            showQuoteBox();
+            saveTask();
+        }
+    }
+});
+  function saveTask(){
+    localStorage.setItem("myTask",listContainer.innerHTML);
+  }
+  function showTask(){
+    listContainer.innerHTML = localStorage.getItem("myTask");
+  }
+  showTask();
+
