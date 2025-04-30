@@ -1,8 +1,8 @@
 # JavaScript Projects
-![alt text](image.png)
+![alt text](1-To-do-list/image.png)
 
 # PROJECT 1:
-![alt text](readme-images/FINALE.png)
+![alt text](1-To-do-list/readme-images/FINALE.png)
 
 ## Important Notes
 
@@ -34,7 +34,7 @@ Use the `<script>` tag, usually placed right before the closing `</body>` tag, t
 
 ### `<div>` Element - Quick Summary
 
-![alt text](readme-images/image-1.png)
+![alt text](1-To-do-list/readme-images/image-1.png)
 
 - **Purpose**: The `<div>` element is used to create a **container** or **wrapper** for grouping HTML elements.
 - **Block-level**: Takes up the full width by default and starts on a new line.
@@ -86,7 +86,7 @@ justify-content: center;
 align-items: center;
 ```
 `This combo is the key to putting anything (like an image, text, div...) perfectly in the center (both horizontally and vertically).`
-![alt text](readme-images/image-4.png)
+![alt text](1-To-do-list/readme-images/image-4.png)
 
 ```css
      border-radius: 10px;
@@ -345,7 +345,7 @@ element.classList.add('class-name');
 element.innerText = someText;
 document.body.appendChild(element);
 ```
-![alt text](image-6.png)
+![alt text](1-To-do-list/reademe-images/image-6.png)
 Sure! Here's your code explanation rewritten in clean **Markdown** format:
 
 ---
@@ -412,8 +412,8 @@ This is your **task-adding function**. Here's what happens:
 ```js
 localStorage.setItem("key", "value");
 ```
-![alt text](readme-images/image-7.png)
-![alt text](readme-images/image-8.png)
+![alt text](1-To-do-list/readme-images/image-7.png)
+![alt text](1-To-do-list/readme-images/image-8.png)
 **localStorage.getItem(key)**
 `It retrieves data that was saved in the local storage using a given key, so you can see the tasks again even after refreshing the page.`
 
