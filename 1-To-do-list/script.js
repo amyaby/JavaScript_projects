@@ -80,6 +80,10 @@ function createMusicIcon() {
       let li = document.createElement("li");
       li.innerHTML = inputBox.value;
       listContainer.appendChild(li);
+
+      let span = document.createElement("span");
+      span.innerHTML = "\u00d7";//code for the cross symbole
+      li.appendChild(span);
     }
     showQuoteBox();
   inputBox.value = "";
@@ -87,27 +91,14 @@ function createMusicIcon() {
   }
   listContainer.addEventListener("click", function(e) {
     if (e.target.tagName === "LI") {
-        // Toggle checked state
-        const isChecked = e.target.classList.toggle("checked");
-        
-        // If it was just unchecked (second click), remove it
-        if (!isChecked) {
-            
-            // Animate removal
-            e.target.style.transform = 'translateX(100%)';
-            e.target.style.opacity = '0';
-            
-            // Remove after animation completes
-            setTimeout(() => {
-                e.target.remove();
-                saveTask();
-            }, 300);
-        } else {
-            showQuoteBox();
-            saveTask();
-        }
+      e.target.classList.toggle("checked");  // Toggle the "checked" state
+      saveTask();
+    } else if (e.target.tagName === "SPAN") {
+      e.target.parentElement.remove();       // Remove the entire <li> when X (span) is clicked
+      saveTask();
     }
-});
+  });
+  
   function saveTask(){
     localStorage.setItem("myTask",listContainer.innerHTML);
   }
