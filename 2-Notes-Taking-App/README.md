@@ -146,3 +146,5 @@ Use .appendChild(element) to place the new element inside another (like a contai
 
  `after it:`kayb9aw ytazdo and the size of the privious ones stay fixed!!
  ![alt text](2-Notes-Taking-App/images/image-2.png)
+
+=> I didn't finish this project cz I've started it and stoppened and then I lost the thread :)
